@@ -5,7 +5,22 @@ export default {
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
-    extend: {},
+    container: {
+      center: true,
+    },
+    extend: {
+      colors: {
+        primary: '#0070f3',
+      },
+      fontFamily: {
+        jost: ['Jost', 'sans-serif'],
+        bigShoulder: ['Big Shoulders Display', 'sans-serif'],
+      },
+      backgroundImage:{
+      'banner': "url('/src/assets/images/Background.png')",
+      },
+      
+    },
   },
   plugins: [],
 }
