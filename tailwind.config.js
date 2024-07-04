@@ -10,7 +10,7 @@ export default {
     },
     extend: {
       colors: {
-        primary: '#0070f3',
+        para: '#999999',
       },
       fontFamily: {
         jost: ['Jost', 'sans-serif'],

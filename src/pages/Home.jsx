@@ -3,9 +3,9 @@ import Banner from '../components/layouts/Banner'
 
 function Home() {
   return (
-    <div>
+    <main>
       <Banner/>
-    </div>
+    </main>
   )
 }
 
