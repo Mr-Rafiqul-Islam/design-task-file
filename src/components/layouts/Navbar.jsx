@@ -8,6 +8,7 @@ import { IoAmericanFootball } from "react-icons/io5";
 import tv from "../../assets/icons/tv.svg";
 import Image from "../Image";
 function Navbar({ className }) {
+    // btn list
     const navBtn = [
         {
           icon: <RiHome6Line size={24} className="text-[#E2E2E2] group-hover:ms-3" />,
@@ -41,6 +42,7 @@ function Navbar({ className }) {
   return (
     <nav className={`${className}`}>
       <div className="bg-red-500/30 w-[95px] flex flex-col items-center justify-center gap-y-4 rounded-full py-4">
+      {/* btns */}
         {navBtn.map((item, index) => (
             <div key={index} className="flex flex-col justify-center items-center cursor-pointer bg-white/20 rounded-full w-[64.14px] h-[64.14px] border border-white/40 group hover:w-[196px] hover:flex-row-reverse duration-300">
             {item.icon}

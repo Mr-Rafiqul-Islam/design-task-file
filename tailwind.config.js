@@ -10,14 +10,12 @@ export default {
     },
     extend: {
       colors: {
-        para: '#999999',
+        'primary':'#1E1E1E',
+        'para': '#999999',
       },
       fontFamily: {
-        jost: ['Jost', 'sans-serif'],
-        bigShoulder: ['Big Shoulders Display', 'sans-serif'],
-      },
-      backgroundImage:{
-      'banner': "url('/src/assets/images/Background.png')",
+        'jost': ['Jost', 'sans-serif'],
+        'bigShoulder': ['Big Shoulders Display', 'sans-serif'],
       },
       
     },
