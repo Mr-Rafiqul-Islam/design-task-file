@@ -64,7 +64,7 @@ function Navbar({ className }) {
     },
   ];
   return (
-    <nav className={`${className}`}>
+    <nav className={`absolute top-1/2 -translate-y-1/2 right-10 ${className}`}>
       <div className="bg-white/10 w-[95px] flex flex-col items-center justify-center gap-y-4 rounded-full py-4">
         {/* btns */}
         {navBtn.map((item, index) => (
