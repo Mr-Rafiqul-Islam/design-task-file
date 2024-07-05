@@ -10,7 +10,7 @@ import TilesBtns from "./TilesBtns";
 function MovieTiles({ thumbnail, title, rating, duration, genre, resulation }) {
   return (
     <div className="relative group max-w-[307px] h-[360.4px] overflow-hidden hover:scale-110 transition-all duration-700">
-      <Image src={thumbnail} className={`object-fill h-[360.4px]`}/>
+      <Image src={thumbnail} className={`object-fill h-[360.4px]`} />
       {/* play btn */}
       <div className="absolute top-1/2 -translate-y-1/2 z-10 left-1/2 -translate-x-1/2 opacity-0 group-hover:opacity-100 duration-700 transition-all cursor-pointer">
         <Image src={Video} />
@@ -43,7 +43,7 @@ function MovieTiles({ thumbnail, title, rating, duration, genre, resulation }) {
         </div>
       </div>
       {/* tilesbtn */}
-      <TilesBtns/>
+      <TilesBtns />
     </div>
   );
 }

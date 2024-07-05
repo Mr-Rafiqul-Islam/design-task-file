@@ -4,7 +4,7 @@ import { FaRegHeart } from "react-icons/fa";
 import airplay from "../assets/icons/airplay.svg";
 import Upload from "../assets/icons/Upload.svg";
 function TilesBtns() {
-    // for btn items
+  // for btn items
   const btnlist = [
     <RiPlayList2Line size={18} className="text-white" />,
     <FaRegHeart size={18} className="text-white" />,
