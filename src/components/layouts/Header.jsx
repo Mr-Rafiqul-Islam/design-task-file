@@ -10,7 +10,7 @@ import { Link } from 'react-router-dom'
 
 function Header() {
   return (
-    <header className='py-5 bg-black/30 fixed z-50 top-0 left-0 w-full'>
+    <header className='py-5  fixed z-50 top-0 left-0 w-full'>
         <Container >
             <div className="flex items-center justify-between gap-y-4">
                 {/* logo */}

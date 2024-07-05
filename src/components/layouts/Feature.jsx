@@ -5,6 +5,7 @@ import movie1 from "../../assets/images/movie1.png";
 import movie2 from "../../assets/images/movie2.png";
 import movie3 from "../../assets/images/movie3.png";
 import movie4 from "../../assets/images/movie4.png";
+import { Link } from "react-router-dom";
 
 function Feature({ classname }) {
     // for feature card
@@ -53,7 +54,7 @@ function Feature({ classname }) {
       <div className="w-full h-[454px] bg-gradient-to-r from-[#181818] to-[#151515] rounded-[50px]">
         <div className="flex justify-center gap-x-[30px] absolute z-10 left-1/2 -translate-x-1/2 -mt-[92px] w-full">
           {featureItem.map((item) => (
-            <FeatureCard
+            <Link to={"/"}><FeatureCard
               key={item.id}
               duration={item.duration}
               resulation={item.resulation}
@@ -61,7 +62,7 @@ function Feature({ classname }) {
               title={item.title}
               thumbnail={item.thumbnail}
               rating={item.rating}
-            />
+            /></Link>
           ))}
         </div>
       </div>

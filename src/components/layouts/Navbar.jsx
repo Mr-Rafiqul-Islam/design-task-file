@@ -65,7 +65,7 @@ function Navbar({ className }) {
   ];
   return (
     <nav className={`${className}`}>
-      <div className="bg-red-500/30 w-[95px] flex flex-col items-center justify-center gap-y-4 rounded-full py-4">
+      <div className="bg-white/10 w-[95px] flex flex-col items-center justify-center gap-y-4 rounded-full py-4">
         {/* btns */}
         {navBtn.map((item, index) => (
           <div
