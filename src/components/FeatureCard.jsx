@@ -14,7 +14,7 @@ function FeatureCard({
   duration,
 }) {
   return (
-    <div className="pb-2">
+    <div className="pb-2 max-w-[364px]">
       {/* card img */}
       <div className="mb-5">
         <Image src={thumbnail} />

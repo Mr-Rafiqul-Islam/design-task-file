@@ -7,6 +7,7 @@ import movie3 from "../../assets/images/movie3.png";
 import movie4 from "../../assets/images/movie4.png";
 
 function Feature({ classname }) {
+    // for feature card
   const featureItem = [
     {
       id: 1,

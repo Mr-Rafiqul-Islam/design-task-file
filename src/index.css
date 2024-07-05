@@ -4,6 +4,13 @@
 
 @layer utilities{
     body{
-        @apply bg-[#1E1E1E] ;
+        background-color: #1E1E1E
     }
+    .custom-transition {
+        transition: background-color 0.3s ease-in-out !important;
+      }
+      
+      .custom-transition:hover {
+        background: linear-gradient(to right, #5A0DFF, #FF29B8,#FF581C);
+      }
 }
