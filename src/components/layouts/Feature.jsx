@@ -8,7 +8,7 @@ import movie4 from "../../assets/images/movie4.png";
 import { Link } from "react-router-dom";
 
 function Feature({ classname }) {
-    // for feature card
+  // for feature card
   const featureItem = [
     {
       id: 1,
@@ -62,7 +62,7 @@ function Feature({ classname }) {
               title={item.title}
               thumbnail={item.thumbnail}
               rating={item.rating}
-              path={'/'}
+              path={"/"}
             />
           ))}
         </div>

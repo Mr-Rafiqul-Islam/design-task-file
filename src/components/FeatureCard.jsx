@@ -13,7 +13,7 @@ function FeatureCard({
   resulation,
   genre,
   duration,
-  path
+  path,
 }) {
   return (
     <div className="pb-2 max-w-[364px]">
@@ -24,11 +24,11 @@ function FeatureCard({
       {/* card content */}
       <div className="flex flex-col items-center gap-y-[15px]">
         {/* title */}
-        <h3 className="font-bigShoulder font-bold text-[35px] leading-[40px] text-white uppercase">
+        <h3 className="font-bigShoulder font-bold text-[35px] leading-[40px] text-white uppercase mt-[22px]">
           {title}
         </h3>
         {/* details */}
-        <div className="flex justify-center items-center gap-x-[15px]">
+        <div className="flex justify-center items-center gap-x-4">
           <p className="text-para flex gap-x-[5px] items-center font-jost font-normal text-base">
             <FaStar className="text-[#D27304]" /> {rating}
           </p>

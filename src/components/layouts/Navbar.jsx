@@ -64,13 +64,13 @@ function Navbar({ className }) {
     },
   ];
   return (
-    <nav className={`absolute top-1/2 z-10 -translate-y-1/2 right-10 ${className}`}>
-      <div className="bg-white/10 w-[95px] flex flex-col items-center justify-center gap-y-4 rounded-full py-4">
+    <nav className={`absolute top-[210px] z-10 right-[50px] ${className}`}>
+      <div className="bg-white/10 w-[95px] flex flex-col items-center justify-center gap-y-[18px] rounded-full py-5">
         {/* btns */}
         {navBtn.map((item, index) => (
           <div
             key={index}
-            className="flex flex-col justify-center items-center cursor-pointer bg-white/20 rounded-full border border-white/40 hover:border-gradient group w-[64.14px] h-[64.14px] hover:w-[196px] hover:flex-row-reverse duration-300"
+            className="flex flex-col justify-center items-center cursor-pointer bg-white/20 rounded-full border border-white/40 hover:border-gradient gap-x-4 group w-[64.14px] h-[64.14px] hover:w-[196px] hover:flex-row-reverse duration-300"
           >
             {item.icon}
             <p className="hidden transition-all duration-300 group-hover:block font-bigShoulder text-[18px] font-bold uppercase leading-[34px] text-white">

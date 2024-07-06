@@ -58,9 +58,10 @@ function NewReleases() {
   ];
 
   return (
-    <section className="mt-[485px] pb-[55px]">
+    <section className="mt-[506px] pb-[60px]">
       <SubHeading text={"newest releases"} />
       {/* slider */}
+      <div className="pt-[48px] pb-[50px]">
       <Slider {...settings}>
         {movies.map((item, index) => (
           <MovieTiles
@@ -74,6 +75,7 @@ function NewReleases() {
           />
         ))}
       </Slider>
+      </div>
     </section>
   );
 }

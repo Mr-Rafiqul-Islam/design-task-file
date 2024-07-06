@@ -42,11 +42,11 @@ function Header() {
     },
   ];
   return (
-    <header className="py-5  fixed z-50 top-0 left-0 w-full">
+    <header className="py-[25px] fixed z-50 top-0 left-0 w-full">
       <Container>
         <div className="flex items-center justify-between gap-y-4">
           {/* logo */}
-          <div className="flex gap-x-[34px] items-center flex-row-reverse sm:flex-row">
+          <div className="flex gap-x-[35px] items-center flex-row-reverse sm:flex-row">
             <Link to={"/"}>
               <Image src={logo} className={`h-auto w-auto`} />
             </Link>
@@ -78,12 +78,12 @@ function Header() {
             </ul>
           </div>
           {/* btn & user */}
-          <div className="flex gap-x-4 items-center">
+          <div className="flex gap-x-[18px] items-center">
             {/* btn */}
             <Button
               text="subscribe now"
               icon={<LuCrown size={16} className="text-[#E2E2E2]" />}
-              className={`!py-[15px] !px-[25px] hidden sm:flex`}
+              className={`hidden sm:flex`}
             />
             {/* user icon*/}
             <Image src={user} className={`h-auto w-auto cursor-pointer`} />

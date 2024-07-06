@@ -44,7 +44,7 @@ function Home() {
   const settings = {
     dots: true,
     infinite: true,
-    autoplay: true,
+    autoplay: false,
     speed: 2000,
     autoplaySpeed: 4000,
     pauseOnHover: false,
