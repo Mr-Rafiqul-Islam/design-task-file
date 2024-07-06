@@ -9,8 +9,28 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Scrolldown from "../components/Scrolldown";
 import SlideNumber from "../components/SlideNumber";
-
+import banner from "../assets/images/Background.png";
 function Home() {
+  // for banner content
+  const bannerContent = [
+    {
+      bannerImg: banner,
+    },
+    {
+      bannerImg: banner,
+    },
+    {
+      bannerImg: banner,
+    },
+    {
+      bannerImg: banner,
+    },
+    {
+      bannerImg: banner,
+    },
+   
+  ];
+  // for slider
   const [activeSlide, setActiveSlide] = useState(0);
   const sliderRef = useRef(null);
   const [totalSlides, setTotalSlides] = useState(0);
@@ -20,11 +40,14 @@ function Home() {
       setTotalSlides(sliderRef.current.innerSlider.props.children.length);
     }
   }, []);
-  // for slider
+  // for slider settings
   const settings = {
     dots: true,
-    infinite: false,
-    speed: 500,
+    infinite: true,
+    autoplay: true,
+    speed: 2000,
+    autoplaySpeed: 4000,
+    pauseOnHover: false,
     slidesToShow: 1,
     slidesToScroll: 1,
     vertical: true,
@@ -45,13 +68,11 @@ function Home() {
         }}
       >
         <ul
-
           style={{
             position: "absolute",
             top: "50%",
             display: "flex",
             flexDirection: "column",
-
           }}
         >
           {dots}
@@ -61,11 +82,13 @@ function Home() {
     customPaging: (i) => (
       <div
         style={{
-          width: "14px",
+          width: activeSlide === i ? "25px" : "14px",
           height: "4px",
-          backgroundColor: "rgba(255, 255, 255, 0.2)",
+          backgroundColor:
+            activeSlide === i ? "white" : "rgba(255, 255, 255, 0.2)",
           borderRadius: "5px",
           fontSize: "0px",
+          transition: "width 0.3s, background-color 0.3s",
         }}
       >
         {i + 1}
@@ -74,19 +97,20 @@ function Home() {
   };
   return (
     <main>
-      <div className="relative" id="home">
+      <div className="relative">
         <Slider ref={sliderRef} {...settings}>
-          <Banner />
-          <Banner />
-          <Banner />
-          <Banner />
-          <Banner />
+          {bannerContent.map((item, index) => (
+            <Banner
+              key={index}
+              bannerImg={item.bannerImg}
+            />
+          ))}
         </Slider>
         <Navbar />
         {/* scroldown icon */}
-        <Scrolldown/>
+        <Scrolldown />
         {/* fraction page number] */}
-        <SlideNumber activeSlide={activeSlide} totalSlides={totalSlides}/>
+        <SlideNumber activeSlide={activeSlide} totalSlides={totalSlides} />
       </div>
       <Feature />
       <NewReleases />

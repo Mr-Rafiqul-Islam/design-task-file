@@ -3,12 +3,6 @@
 @tailwind utilities;
 
 @layer utilities {
-  .slick-dots .slick-active div{
-    width: 25px !important;
-    height: 4px !important;
-    background-color: white !important;
-    transition: all linear 500ms;
-}
   body {
     background-color: #1e1e1e;
     overflow-x: hidden;
