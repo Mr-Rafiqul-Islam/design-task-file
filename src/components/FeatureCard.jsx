@@ -4,6 +4,7 @@ import Time from "../assets/icons/Time.svg";
 import quality from "../assets/icons/quality.svg";
 import { FaStar } from "react-icons/fa";
 import { RiHdLine } from "react-icons/ri";
+import { Link } from "react-router-dom";
 
 function FeatureCard({
   thumbnail,
@@ -12,13 +13,14 @@ function FeatureCard({
   resulation,
   genre,
   duration,
+  path
 }) {
   return (
     <div className="pb-2 max-w-[364px]">
       {/* card img */}
-      <div className="mb-5">
+      <Link to={path} className="mb-5">
         <Image src={thumbnail} />
-      </div>
+      </Link>
       {/* card content */}
       <div className="flex flex-col items-center gap-y-[15px]">
         {/* title */}

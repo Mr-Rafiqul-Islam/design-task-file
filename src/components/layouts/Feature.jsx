@@ -54,7 +54,7 @@ function Feature({ classname }) {
       <div className="w-full h-[454px] bg-gradient-to-r from-[#181818] to-[#151515] rounded-[50px]">
         <div className="flex justify-center gap-x-[30px] absolute z-10 left-1/2 -translate-x-1/2 -mt-[92px] w-full">
           {featureItem.map((item) => (
-            <Link to={"/"}><FeatureCard
+            <FeatureCard
               key={item.id}
               duration={item.duration}
               resulation={item.resulation}
@@ -62,7 +62,8 @@ function Feature({ classname }) {
               title={item.title}
               thumbnail={item.thumbnail}
               rating={item.rating}
-            /></Link>
+              path={'/'}
+            />
           ))}
         </div>
       </div>

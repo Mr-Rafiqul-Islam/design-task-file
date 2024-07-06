@@ -3,10 +3,17 @@
 @tailwind utilities;
 
 @layer utilities {
+  .slick-dots .slick-active div{
+    width: 25px !important;
+    height: 4px !important;
+    background-color: white !important;
+    transition: all linear 500ms;
+}
   body {
     background-color: #1e1e1e;
     overflow-x: hidden;
   }
+  /* for tilesbtn */
   .custom-transition {
     transition: background-color 0.3s ease-in-out !important;
   }
@@ -14,7 +21,7 @@
   .custom-transition:hover {
     background: linear-gradient(to right, #5a0dff, #ff29b8, #ff581c);
   }
-
+  /*for navbtn */
   .border-gradient {
     position: relative;
     padding: 4px; /* Space for border */
@@ -64,4 +71,5 @@
     mask-composite: exclude;
     -webkit-mask-composite: xor;
   }
+ 
 }

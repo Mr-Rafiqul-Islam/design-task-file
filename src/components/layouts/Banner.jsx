@@ -25,7 +25,7 @@ function Banner() {
   return (
     <section className="w-full relative">
       {/* banner img */}
-      <Image src={banner} className="w-full h-auto" />
+      <Image src={banner} className="w-full h-full" />
       <div className="absolute top-1/2 -translate-y-1/2  right-[30px] lg:right-[50px] xl:right-[200px]">
         {/* banner content */}
         <h1 className="text-white font-bigShoulder font-black inline-block text-[48px] md:text-[100px] md:leading-[100px] xl:text-[150px] xl:leading-[155px] text-start uppercase">
