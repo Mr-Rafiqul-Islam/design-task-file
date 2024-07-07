@@ -6,6 +6,12 @@ export default {
       center: true,
     },
     extend: {
+      screens: {
+        'max-420': {'max': '420px'},
+        'max-640': {'max': '640px'},
+        'min-420': {'min': '420px'},
+        'min-576': {'min': '576px'},
+      },
       colors: {
         primary: "#1E1E1E",
         para: "#999999",

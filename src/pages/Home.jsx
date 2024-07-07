@@ -28,18 +28,30 @@ function Home() {
     {
       bannerImg: banner,
     },
-   
   ];
   // for slider
   const [activeSlide, setActiveSlide] = useState(0);
   const sliderRef = useRef(null);
   const [totalSlides, setTotalSlides] = useState(0);
-
+  const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+  // for getting total slidesNumber
   useEffect(() => {
     if (sliderRef.current) {
       setTotalSlides(sliderRef.current.innerSlider.props.children.length);
     }
   }, []);
+  // for responsive
+  useEffect(() => {
+    const handleResize = () => {
+      setWindowWidth(window.innerWidth);
+    };
+
+    window.addEventListener("resize", handleResize);
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
+
   // for slider settings
   const settings = {
     dots: true,
@@ -60,10 +72,12 @@ function Home() {
       <div
         style={{
           position: "absolute",
-          top: "394px",
-          left: "55px",
+          top:
+            windowWidth < 640 ? "60px" : windowWidth < 768 ? "110px" : windowWidth < 1024 ? "130px" : "394px",
+          left:
+            windowWidth < 640 ? "10px" : windowWidth < 1024 ? "15px" : "55px",
           transform: "translateY(-50%)",
-          display: "inline-block",
+          display: windowWidth < 420 ? "none" : "inline-block",
           width: "auto",
         }}
       >
@@ -82,7 +96,14 @@ function Home() {
     customPaging: (i) => (
       <div
         style={{
-          width: activeSlide === i ? "25px" : "14px",
+          width:
+            activeSlide === i
+              ? windowWidth < 768
+                ? "14px"
+                : "25px"
+              : windowWidth < 768
+              ? "10px"
+              : "14px",
           height: "4px",
           backgroundColor:
             activeSlide === i ? "white" : "rgba(255, 255, 255, 0.2)",
@@ -95,15 +116,13 @@ function Home() {
       </div>
     ),
   };
+
   return (
     <main>
-      <div className="relative">
+      <section className="relative">
         <Slider ref={sliderRef} {...settings}>
           {bannerContent.map((item, index) => (
-            <Banner
-              key={index}
-              bannerImg={item.bannerImg}
-            />
+            <Banner key={index} bannerImg={item.bannerImg} />
           ))}
         </Slider>
         <Navbar />
@@ -111,8 +130,8 @@ function Home() {
         <Scrolldown />
         {/* fraction page number] */}
         <SlideNumber activeSlide={activeSlide} totalSlides={totalSlides} />
-      </div>
-      <Feature />
+      </section>
+      {/* <Feature /> */}
       <NewReleases />
     </main>
   );

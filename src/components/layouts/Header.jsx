@@ -42,23 +42,23 @@ function Header() {
     },
   ];
   return (
-    <header className="py-[25px] fixed z-50 top-0 left-0 w-full">
+    <header className=" py-2 sm:py-[25px] fixed z-50 top-0 left-0 w-full">
       <Container>
         <div className="flex items-center justify-between gap-y-4">
           {/* logo */}
           <div className="flex gap-x-[35px] items-center flex-row-reverse sm:flex-row">
             <Link to={"/"}>
-              <Image src={logo} className={`h-auto w-auto`} />
+              <Image src={logo} className={`h-auto w-[100px] sm:w-[130px]`} />
             </Link>
             {/* menubar */}
             <div
-              className="grid place-content-center cursor-pointer w-[50px] h-[50px] rounded-full border border-white/40"
+              className="grid place-content-center cursor-pointer w-7 sm:w-[50px] h-7 sm:h-[50px] rounded-full border border-white/40"
               onClick={toggleMenu}
             >
               {menuOpen ? (
-                <RxCross2 className="text-xl cursor-pointer text-[#E2E2E2] z-50" />
+                <RxCross2 className="text-sm sm:text-xl cursor-pointer text-[#E2E2E2] z-50" />
               ) : (
-                <RiMenu2Line size={24} className="text-[#E2E2E2] z-50" />
+                <RiMenu2Line  className="text-[#E2E2E2] text-sm sm:text-xl z-50" />
               )}
             </div>
             <ul
@@ -75,6 +75,13 @@ function Header() {
                   <Link to={item.link}>{item.text}</Link>
                 </li>
               ))}
+              <div className="mx-auto flex sm:hidden">
+              <Button
+              text="subscribe now"
+              icon={<LuCrown size={16} className="text-[#E2E2E2]" />}
+              className={``}
+            />
+              </div>
             </ul>
           </div>
           {/* btn & user */}
@@ -86,7 +93,7 @@ function Header() {
               className={`hidden sm:flex`}
             />
             {/* user icon*/}
-            <Image src={user} className={`h-auto w-auto cursor-pointer`} />
+            <Image src={user} className={`w-[35px] h-auto sm:w-auto cursor-pointer`} />
           </div>
         </div>
       </Container>
