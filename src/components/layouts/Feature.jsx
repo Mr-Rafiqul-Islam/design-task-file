@@ -48,10 +48,10 @@ function Feature({ classname }) {
   ];
   return (
     <div
-      className={`absolute z-10 left-1/2 -translate-x-1/2 -mt-14 w- min-1800:w-[1800px]`}
+      className={`xl:absolute z-10 xl:left-1/2 xl:-translate-x-1/2 xl:-mt-10 2xl:-mt-14 lg:w-[1024px] 2xl:w-full lg:mx-auto min-1800:w-[1800px]`}
     >
-      <div className="w-full h-[454px] bg-gradient-to-r from-[#181818] to-[#151515] rounded-[50px]">
-        <div className="flex justify-center gap-x-[30px] absolute z-10 left-1/2 -translate-x-1/2 -mt-[92px] w-full">
+      <div className="w-full 2xl:h-[454px] bg-gradient-to-r from-[#181818] to-[#151515] rounded-[50px] py-5 2xl:py-0">
+        <div className="flex flex-wrap 2xl:flex-nowrap justify-center gap-x-[30px] 2xl:absolute 2xl:z-10 2xl:left-1/2 2xl:-translate-x-1/2 xl:-mt-[60px] 2xl:-mt-[68px] min-1800:-mt-[92px] 2xl:w-full">
           {featureItem.map((item) => (
             <FeatureCard
               key={item.id}

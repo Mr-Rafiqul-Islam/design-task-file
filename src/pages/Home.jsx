@@ -132,7 +132,7 @@ function Home() {
         {/* fraction page number] */}
         <SlideNumber activeSlide={activeSlide} totalSlides={totalSlides} />
       </section>
-      {/* <Feature /> */}
+      <Feature />
       <NewReleases />
     </main>
   );
