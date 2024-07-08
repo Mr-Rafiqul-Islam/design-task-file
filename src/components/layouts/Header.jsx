@@ -75,13 +75,6 @@ function Header() {
                   <Link to={item.link}>{item.text}</Link>
                 </li>
               ))}
-              <div className="mx-auto flex sm:hidden">
-              <Button
-              text="subscribe now"
-              icon={<LuCrown size={16} className="text-[#E2E2E2]" />}
-              className={``}
-            />
-              </div>
             </ul>
           </div>
           {/* btn & user */}

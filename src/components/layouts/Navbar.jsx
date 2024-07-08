@@ -11,60 +11,48 @@ function Navbar({ className }) {
   // btn list
   const navBtn = [
     {
-      icon: (
-        <RiHome6Line  className="text-[#E2E2E2] lg:text-xl 2xl:text-2xl" />
-      ),
+      icon: <RiHome6Line className="text-[#E2E2E2] lg:text-xl 2xl:text-2xl" />,
       text: "Home",
     },
     {
-      icon: <FiSearch  className="text-[#E2E2E2] lg:text-xl 2xl:text-2xl" />,
+      icon: <FiSearch className="text-[#E2E2E2] lg:text-xl 2xl:text-2xl" />,
       text: "search",
     },
     {
       icon: (
-        <HiOutlineVideoCamera
-          
-          className="text-[#E2E2E2] lg:text-xl 2xl:text-2xl"
-        />
+        <HiOutlineVideoCamera className="text-[#E2E2E2] lg:text-xl 2xl:text-2xl" />
       ),
       text: "Live",
     },
     {
       icon: (
-        <RiPlayList2Fill
-          
-          className="text-[#E2E2E2] lg:text-xl 2xl:text-2xl"
-        />
+        <RiPlayList2Fill className="text-[#E2E2E2] lg:text-xl 2xl:text-2xl" />
       ),
       text: "add to playlist",
     },
     {
       icon: (
-        <Image src={tv}  className="text-[#E2E2E2] lg:w-[18px] 2xl:w-[24px]" />
+        <Image src={tv} className="text-[#E2E2E2] lg:w-[18px] 2xl:w-[24px]" />
       ),
       text: "watchlist",
     },
     {
       icon: (
-        <PiGameControllerDuotone
-          
-          className="text-[#E2E2E2] lg:text-xl 2xl:text-2xl"
-        />
+        <PiGameControllerDuotone className="text-[#E2E2E2] lg:text-xl 2xl:text-2xl" />
       ),
       text: "gaming",
     },
     {
       icon: (
-        <IoAmericanFootball
-          
-          className="text-[#E2E2E2] lg:text-xl 2xl:text-2xl"
-        />
+        <IoAmericanFootball className="text-[#E2E2E2] lg:text-xl 2xl:text-2xl" />
       ),
       text: "sports",
     },
   ];
   return (
-    <nav className={`absolute z-10 lg:top-[90px] xl:top-[150px] lg:right-[50px] min-1800:!top-[210px] hidden lg:block ${className}`}>
+    <nav
+      className={`absolute z-10 lg:top-[90px] xl:top-[150px] lg:right-[50px] min-1800:!top-[210px] hidden lg:block ${className}`}
+    >
       <div className="bg-white/10 lg:w-[70px] 2xl:w-[95px] flex flex-col items-center justify-center lg:gap-y-[10px] 2xl:gap-y-[18px] rounded-full py-5">
         {/* btns */}
         {navBtn.map((item, index) => (

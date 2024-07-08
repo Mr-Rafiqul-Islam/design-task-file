@@ -8,7 +8,7 @@ function Scrolldown() {
         Scroll down
       </p>
       <div className="animate-bounce transition-all duration-300 -ms-1">
-        <Image src={downarrow}  />
+        <Image src={downarrow} />
       </div>
     </div>
   );
