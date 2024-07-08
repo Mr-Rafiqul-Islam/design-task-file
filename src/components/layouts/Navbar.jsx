@@ -12,19 +12,19 @@ function Navbar({ className }) {
   const navBtn = [
     {
       icon: (
-        <RiHome6Line size={24} className="text-[#E2E2E2] group-hover:ms-3" />
+        <RiHome6Line  className="text-[#E2E2E2] lg:text-xl 2xl:text-2xl" />
       ),
       text: "Home",
     },
     {
-      icon: <FiSearch size={24} className="text-[#E2E2E2] group-hover:ms-3" />,
+      icon: <FiSearch  className="text-[#E2E2E2] lg:text-xl 2xl:text-2xl" />,
       text: "search",
     },
     {
       icon: (
         <HiOutlineVideoCamera
-          size={24}
-          className="text-[#E2E2E2] group-hover:ms-3"
+          
+          className="text-[#E2E2E2] lg:text-xl 2xl:text-2xl"
         />
       ),
       text: "Live",
@@ -32,23 +32,23 @@ function Navbar({ className }) {
     {
       icon: (
         <RiPlayList2Fill
-          size={24}
-          className="text-[#E2E2E2] group-hover:ms-3"
+          
+          className="text-[#E2E2E2] lg:text-xl 2xl:text-2xl"
         />
       ),
       text: "add to playlist",
     },
     {
       icon: (
-        <Image src={tv} size={24} className="text-[#E2E2E2] group-hover:ms-3" />
+        <Image src={tv}  className="text-[#E2E2E2] lg:w-[18px] 2xl:w-[24px]" />
       ),
       text: "watchlist",
     },
     {
       icon: (
         <PiGameControllerDuotone
-          size={24}
-          className="text-[#E2E2E2] group-hover:ms-3"
+          
+          className="text-[#E2E2E2] lg:text-xl 2xl:text-2xl"
         />
       ),
       text: "gaming",
@@ -56,24 +56,24 @@ function Navbar({ className }) {
     {
       icon: (
         <IoAmericanFootball
-          size={24}
-          className="text-[#E2E2E2] group-hover:ms-3"
+          
+          className="text-[#E2E2E2] lg:text-xl 2xl:text-2xl"
         />
       ),
       text: "sports",
     },
   ];
   return (
-    <nav className={`absolute top-[210px] z-10 right-[50px] ${className}`}>
-      <div className="bg-white/10 w-[95px] flex flex-col items-center justify-center gap-y-[18px] rounded-full py-5">
+    <nav className={`absolute z-10 lg:top-[90px] xl:top-[150px] lg:right-[50px] min-1800:!top-[210px] hidden lg:block ${className}`}>
+      <div className="bg-white/10 lg:w-[70px] 2xl:w-[95px] flex flex-col items-center justify-center lg:gap-y-[10px] 2xl:gap-y-[18px] rounded-full py-5">
         {/* btns */}
         {navBtn.map((item, index) => (
           <div
             key={index}
-            className="flex flex-col justify-center items-center cursor-pointer bg-white/20 rounded-full border border-white/40 hover:border-gradient gap-x-4 group w-[64.14px] h-[64.14px] hover:w-[196px] hover:flex-row-reverse duration-300"
+            className="flex flex-col justify-center items-center cursor-pointer bg-white/20 rounded-full border border-white/40 hover:border-gradient gap-x-4 group lg:w-[50px] lg:h-[50px] 2xl:w-[64.14px] 2xl:h-[64.14px] lg:hover:w-[150px] 2xl:hover:w-[196px] hover:flex-row-reverse duration-300"
           >
             {item.icon}
-            <p className="hidden transition-all duration-300 group-hover:block font-bigShoulder text-[18px] font-bold uppercase leading-[34px] text-white">
+            <p className="hidden transition-all duration-300 group-hover:block font-bigShoulder lg:text-sm 2xl:text-[18px] font-bold uppercase leading-[34px] text-white">
               {item.text}
             </p>
           </div>

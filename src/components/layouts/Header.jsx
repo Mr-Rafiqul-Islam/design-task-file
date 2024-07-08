@@ -46,7 +46,7 @@ function Header() {
       <Container>
         <div className="flex items-center justify-between gap-y-4">
           {/* logo */}
-          <div className="flex gap-x-[35px] items-center flex-row-reverse sm:flex-row">
+          <div className="flex gap-x-[10px] md:gap-x-[20px] 2xl:gap-x-[35px] items-center flex-row-reverse sm:flex-row">
             <Link to={"/"}>
               <Image src={logo} className={`h-auto w-[100px] sm:w-[130px]`} />
             </Link>
@@ -90,7 +90,7 @@ function Header() {
             <Button
               text="subscribe now"
               icon={<LuCrown size={16} className="text-[#E2E2E2]" />}
-              className={`hidden sm:flex`}
+              className={`2xl:py-[23px] 2xl:px-[24px]`}
             />
             {/* user icon*/}
             <Image src={user} className={`w-[35px] h-auto sm:w-auto cursor-pointer`} />

@@ -11,10 +11,14 @@ export default {
         'max-640': {'max': '640px'},
         'min-420': {'min': '420px'},
         'min-576': {'min': '576px'},
+        'min-1800': {'min': '1800px'},
       },
       colors: {
         primary: "#1E1E1E",
         para: "#999999",
+      },
+      maxWidth: {
+        'container': '1800px',
       },
       fontFamily: {
         jost: ["Jost", "sans-serif"],

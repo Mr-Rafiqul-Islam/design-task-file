@@ -1,5 +1,4 @@
 import React from "react";
-import Container from "../Container";
 import FeatureCard from "../FeatureCard";
 import movie1 from "../../assets/images/movie1.png";
 import movie2 from "../../assets/images/movie2.png";
@@ -48,8 +47,8 @@ function Feature({ classname }) {
     },
   ];
   return (
-    <Container
-      className={`absolute z-10 left-1/2 -translate-x-1/2 -mt-14 ${classname}`}
+    <div
+      className={`absolute z-10 left-1/2 -translate-x-1/2 -mt-14 w- min-1800:w-[1800px]`}
     >
       <div className="w-full h-[454px] bg-gradient-to-r from-[#181818] to-[#151515] rounded-[50px]">
         <div className="flex justify-center gap-x-[30px] absolute z-10 left-1/2 -translate-x-1/2 -mt-[92px] w-full">
@@ -67,7 +66,7 @@ function Feature({ classname }) {
           ))}
         </div>
       </div>
-    </Container>
+    </div>
   );
 }
 
