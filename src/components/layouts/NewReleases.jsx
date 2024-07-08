@@ -28,6 +28,50 @@ function NewReleases() {
     cssEase: "linear",
     nextArrow: <NextArrow />,
     prevArrow: <PrevArrow />,
+    responsive: [
+      {
+        breakpoint: 1800,
+        settings: {
+          slidesToShow: 5,
+          slidesToScroll: 3,
+          infinite: true,
+          dots: false
+        }
+      },
+      {
+        breakpoint: 1536,
+        settings: {
+          slidesToShow: 4,
+          slidesToScroll: 3,
+          infinite: true,
+          dots: false
+        }
+      },
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 3,
+          slidesToScroll: 3,
+          infinite: true,
+          dots: false
+        }
+      },
+      {
+        breakpoint: 768,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 2,
+          initialSlide: 2
+        }
+      },
+      {
+        breakpoint: 480,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 1
+        }
+      }
+    ]
   };
   //   for slider data
   const movies = [
@@ -58,7 +102,7 @@ function NewReleases() {
   ];
 
   return (
-    <section className="mt-[506px] pb-[60px]">
+    <section className="mt-7 xl:mt-[215px] 2xl:mt-[506px] pb-[60px]">
       <SubHeading text={"newest releases"} />
       {/* slider */}
       <div className="pt-[48px] pb-[50px]">

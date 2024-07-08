@@ -37,7 +37,7 @@ function FeatureCard({
           </p>
           <p className="text-para flex gap-x-[2px] 2xl:gap-x-[5px] items-center font-jost font-normal  text-[10px] 2xl:text-base capitalize">
             {resulation.toLowerCase() === "4k quality" ? (
-              <Image src={quality} className="2xl:-mb-[9px] -mb-[3px] w-[15px]" />
+              <Image src={quality} className="2xl:-mb-[9px] -mb-[3px] w-[15px] 2xl:w-auto" />
             ) : (
               <RiHdLine className="text-white" size={20} />
             )}{" "}

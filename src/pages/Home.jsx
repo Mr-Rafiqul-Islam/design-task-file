@@ -55,9 +55,9 @@ function Home() {
   // for slider settings
   const settings = {
     dots: true,
-    arrows:false,
+    arrows: false,
     infinite: true,
-    autoplay: false,
+    autoplay: true,
     speed: 2000,
     autoplaySpeed: 4000,
     pauseOnHover: false,
@@ -74,7 +74,15 @@ function Home() {
         style={{
           position: "absolute",
           top:
-            windowWidth < 640 ? "60px" : windowWidth < 768 ? "110px" : windowWidth < 1280 ? "130px" :windowWidth < 1800 ? "255px" : "394px",
+            windowWidth < 640
+              ? "60px"
+              : windowWidth < 768
+              ? "110px"
+              : windowWidth < 1280
+              ? "130px"
+              : windowWidth < 1800
+              ? "255px"
+              : "394px",
           left:
             windowWidth < 640 ? "10px" : windowWidth < 1800 ? "15px" : "55px",
           transform: "translateY(-50%)",

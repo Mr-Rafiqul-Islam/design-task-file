@@ -19,20 +19,20 @@ function MovieTiles({ thumbnail, title, rating, duration, genre, resulation }) {
       <div className="absolute transition-all duration-300 -bottom-[115px] left-[25px] group-hover:bottom-[25px]">
         <div className="flex flex-col items-start gap-y-[5px]">
           {/* title */}
-          <h3 className="font-bigShoulder font-bold text-[35px] leading-[40px] text-white uppercase">
+          <h3 className="font-bigShoulder font-bold text-[30px] 2xl:text-[35px] leading-[40px] text-white uppercase">
             {title}
           </h3>
           {/* details */}
-          <div className="flex justify-start items-center gap-x-[15px]">
-            <p className="text-para flex gap-x-[5px] items-center font-jost font-normal text-base">
+          <div className="flex justify-start items-center gap-x-2 2xl:gap-x-4">
+            <p className="text-para flex gap-x-[2px] 2xl:gap-x-[5px] items-center font-jost font-normal text-[10px] 2xl:text-base">
               <FaStar className="text-[#D27304]" /> {rating}
             </p>
-            <p className="text-para flex gap-x-[5px] items-center font-jost font-normal text-base">
-              <Image src={Time} /> {duration}
+            <p className="text-para flex gap-x-[2px] 2xl:gap-x-[5px] items-center font-jost font-normal text-[10px] 2xl:text-base">
+              <Image src={Time} className={"w-[10px] 2xl:w-[14px]"}/> {duration}
             </p>
-            <p className="text-para flex gap-x-[5px] items-center font-jost font-normal text-base capitalize">
+            <p className="text-para flex gap-x-[2px] 2xl:gap-x-[5px] items-center font-jost font-normal  text-[10px] 2xl:text-base capitalize">
               {resulation.toLowerCase() === "4k quality" ? (
-                <Image src={quality} className="-mb-[9px]" />
+                <Image src={quality} className="2xl:-mb-[9px] -mb-[3px] w-[15px] 2xl:w-auto" />
               ) : (
                 <RiHdLine className="text-white" size={20} />
               )}{" "}
